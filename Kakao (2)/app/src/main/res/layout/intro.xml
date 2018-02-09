@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffec2f">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="전화번호 입력"
+            android:textSize="20dp"
+            android:background="#7b595a"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="본인 휴대전화번호를 입력해주세요"
+        android:textAlignment="center"
+        android:textColor="#715933"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="+82 "/>
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:hint="핸드폰번호입력"
+        android:text="01012341234"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/boder_light_orange"
+
+        />
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="다음"
+        android:textSize="25dp"
+        android:background="#725c5e"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="kakao intro message 카카오톡은 전화번호의 본인 사용 확인 및 부정사용 방지를 위하여 인증을 필요로 합니다."
+        android:layout_marginTop="30dp"/>
+</LinearLayout>
