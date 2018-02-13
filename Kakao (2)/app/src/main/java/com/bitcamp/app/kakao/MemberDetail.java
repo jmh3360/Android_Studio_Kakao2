@@ -14,10 +14,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bitcamp.app.kakao.util.Email;
+import com.bitcamp.app.kakao.util.Phone;
+
 import static com.bitcamp.app.kakao.Intro.*;
 
 public class MemberDetail extends AppCompatActivity {
-
+    Phone phone;
+    Email email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,24 @@ public class MemberDetail extends AppCompatActivity {
         Intent intent = this.getIntent();
         final String userid = intent.getStringExtra(Intro.MEMBER_1);
         final MemberItem item = new MemberItem(context);
+        email = new Email(context,this);
+
+
+
+        phone = new Phone(context,this);
+        findViewById(R.id.album_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(context,Album.class));
+            }
+        });
+        findViewById(R.id.call_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         final Member member = (Member) new DetailService() {
             @Override
             public Object execute() {
@@ -53,6 +75,12 @@ public class MemberDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+        findViewById(R.id.email_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                email.sendEmail(member.email);
             }
         });
         findViewById(R.id.update_btn).setOnClickListener(new View.OnClickListener() {

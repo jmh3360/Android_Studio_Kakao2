@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bitcamp.app.kakao">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +23,9 @@
         </activity>
         <activity android:name=".MemberList" />
         <activity android:name=".MemberDetail" />
-        <activity android:name=".MemberUpdate"></activity>
+        <activity android:name=".MemberUpdate" />
+        <activity android:name=".Memberadd" />
+        <activity android:name=".Album"></activity>
     </application>
 
 </manifest>

@@ -69,7 +69,7 @@
             android:textSize="10dp" />
 
         <Button
-            android:id="@+id/message_btn"
+            android:id="@+id/email_btn"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:gravity="center"
